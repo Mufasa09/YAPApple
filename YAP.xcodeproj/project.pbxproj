@@ -3,16 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FB254E1525F73342007B5665 /* YAPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB254E0225F73341007B5665 /* YAPApp.swift */; };
-		FB254E1625F73342007B5665 /* YAPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB254E0225F73341007B5665 /* YAPApp.swift */; };
 		FB254E1725F73342007B5665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB254E0325F73341007B5665 /* ContentView.swift */; };
-		FB254E1825F73342007B5665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB254E0325F73341007B5665 /* ContentView.swift */; };
 		FB254E1925F73342007B5665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB254E0425F73342007B5665 /* Assets.xcassets */; };
-		FB254E1A25F73342007B5665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB254E0425F73342007B5665 /* Assets.xcassets */; };
+		FBAA1FD42C0CDDCB00CD2106 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA1FD32C0CDDCB00CD2106 /* MainView.swift */; };
+		FBAA1FD62C0CE15E00CD2106 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA1FD52C0CE15E00CD2106 /* TabButton.swift */; };
+		FBAA1FD82C0CE5BC00CD2106 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA1FD72C0CE5BC00CD2106 /* CustomCorners.swift */; };
+		FBAA1FDA2C0CEAE700CD2106 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA1FD92C0CEAE700CD2106 /* SideMenu.swift */; };
+		FBAA1FDC2C0CEBA800CD2106 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA1FDB2C0CEBA800CD2106 /* Home.swift */; };
+		FBF12C542BD2D46D00B8B486 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBF12C532BD2D46D00B8B486 /* GoogleService-Info.plist */; };
+		FBF12C582BD2D64500B8B486 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C572BD2D64500B8B486 /* FirebaseAnalytics */; };
+		FBF12C5A2BD2D64500B8B486 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C592BD2D64500B8B486 /* FirebaseAnalyticsSwift */; };
+		FBF12C5C2BD2D64500B8B486 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C5B2BD2D64500B8B486 /* FirebaseAuth */; };
+		FBF12C5E2BD2D64500B8B486 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C5D2BD2D64500B8B486 /* FirebaseDatabase */; };
+		FBF12C602BD2D64500B8B486 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C5F2BD2D64500B8B486 /* FirebaseDatabaseSwift */; };
+		FBF12C622BD2D64500B8B486 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C612BD2D64500B8B486 /* FirebasePerformance */; };
+		FBF12C642BD2D64500B8B486 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FBF12C632BD2D64500B8B486 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +31,14 @@
 		FB254E0425F73342007B5665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB254E0925F73342007B5665 /* YAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB254E0C25F73342007B5665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB254E1125F73342007B5665 /* YAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB254E1325F73342007B5665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB254E1425F73342007B5665 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		FBAA1FD32C0CDDCB00CD2106 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBAA1FD52C0CE15E00CD2106 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		FBAA1FD72C0CE5BC00CD2106 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		FBAA1FD92C0CEAE700CD2106 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		FBAA1FDB2C0CEBA800CD2106 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		FBF12C532BD2D46D00B8B486 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,13 +46,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB254E0E25F73342007B5665 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				FBF12C602BD2D64500B8B486 /* FirebaseDatabaseSwift in Frameworks */,
+				FBF12C5A2BD2D64500B8B486 /* FirebaseAnalyticsSwift in Frameworks */,
+				FBF12C622BD2D64500B8B486 /* FirebasePerformance in Frameworks */,
+				FBF12C5C2BD2D64500B8B486 /* FirebaseAuth in Frameworks */,
+				FBF12C642BD2D64500B8B486 /* FirebaseStorage in Frameworks */,
+				FBF12C5E2BD2D64500B8B486 /* FirebaseDatabase in Frameworks */,
+				FBF12C582BD2D64500B8B486 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +72,11 @@
 		FB254E0125F73341007B5665 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FBAA1FD22C0CDD9800CD2106 /* View */,
 				FB254E0225F73341007B5665 /* YAPApp.swift */,
 				FB254E0325F73341007B5665 /* ContentView.swift */,
 				FB254E0425F73342007B5665 /* Assets.xcassets */,
+				FBF12C532BD2D46D00B8B486 /* GoogleService-Info.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -68,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				FB254E0925F73342007B5665 /* YAP.app */,
-				FB254E1125F73342007B5665 /* YAP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +106,18 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		FBAA1FD22C0CDD9800CD2106 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBAA1FD32C0CDDCB00CD2106 /* MainView.swift */,
+				FBAA1FD52C0CE15E00CD2106 /* TabButton.swift */,
+				FBAA1FD72C0CE5BC00CD2106 /* CustomCorners.swift */,
+				FBAA1FD92C0CEAE700CD2106 /* SideMenu.swift */,
+				FBAA1FDB2C0CEBA800CD2106 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,25 +134,17 @@
 			dependencies = (
 			);
 			name = "YAP (iOS)";
+			packageProductDependencies = (
+				FBF12C572BD2D64500B8B486 /* FirebaseAnalytics */,
+				FBF12C592BD2D64500B8B486 /* FirebaseAnalyticsSwift */,
+				FBF12C5B2BD2D64500B8B486 /* FirebaseAuth */,
+				FBF12C5D2BD2D64500B8B486 /* FirebaseDatabase */,
+				FBF12C5F2BD2D64500B8B486 /* FirebaseDatabaseSwift */,
+				FBF12C612BD2D64500B8B486 /* FirebasePerformance */,
+				FBF12C632BD2D64500B8B486 /* FirebaseStorage */,
+			);
 			productName = "YAP (iOS)";
 			productReference = FB254E0925F73342007B5665 /* YAP.app */;
-			productType = "com.apple.product-type.application";
-		};
-		FB254E1025F73342007B5665 /* YAP (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB254E2025F73342007B5665 /* Build configuration list for PBXNativeTarget "YAP (macOS)" */;
-			buildPhases = (
-				FB254E0D25F73342007B5665 /* Sources */,
-				FB254E0E25F73342007B5665 /* Frameworks */,
-				FB254E0F25F73342007B5665 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "YAP (macOS)";
-			productName = "YAP (macOS)";
-			productReference = FB254E1125F73342007B5665 /* YAP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,12 +154,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					FB254E0825F73342007B5665 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					FB254E1025F73342007B5665 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -153,12 +170,14 @@
 				Base,
 			);
 			mainGroup = FB254DFC25F73341007B5665;
+			packageReferences = (
+				FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = FB254E0A25F73342007B5665 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FB254E0825F73342007B5665 /* YAP (iOS) */,
-				FB254E1025F73342007B5665 /* YAP (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -169,14 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB254E1925F73342007B5665 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB254E0F25F73342007B5665 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB254E1A25F73342007B5665 /* Assets.xcassets in Resources */,
+				FBF12C542BD2D46D00B8B486 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,16 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB254E1725F73342007B5665 /* ContentView.swift in Sources */,
+				FBAA1FD62C0CE15E00CD2106 /* TabButton.swift in Sources */,
+				FBAA1FD42C0CDDCB00CD2106 /* MainView.swift in Sources */,
+				FBAA1FDA2C0CEAE700CD2106 /* SideMenu.swift in Sources */,
 				FB254E1525F73342007B5665 /* YAPApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB254E0D25F73342007B5665 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB254E1825F73342007B5665 /* ContentView.swift in Sources */,
-				FB254E1625F73342007B5665 /* YAPApp.swift in Sources */,
+				FBAA1FD82C0CE5BC00CD2106 /* CustomCorners.swift in Sources */,
+				FBAA1FDC2C0CEBA800CD2106 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKXQL4HPZ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -342,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKXQL4HPZ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -355,50 +365,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FB254E2125F73342007B5665 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = YAP.KMD.YAP;
-				PRODUCT_NAME = YAP;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FB254E2225F73342007B5665 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = YAP.KMD.YAP;
-				PRODUCT_NAME = YAP;
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -423,16 +389,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB254E2025F73342007B5665 /* Build configuration list for PBXNativeTarget "YAP (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB254E2125F73342007B5665 /* Debug */,
-				FB254E2225F73342007B5665 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBF12C572BD2D64500B8B486 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FBF12C592BD2D64500B8B486 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FBF12C5B2BD2D64500B8B486 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FBF12C5D2BD2D64500B8B486 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		FBF12C5F2BD2D64500B8B486 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		FBF12C612BD2D64500B8B486 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		FBF12C632BD2D64500B8B486 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF12C562BD2D64500B8B486 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB254DFD25F73341007B5665 /* Project object */;
 }
