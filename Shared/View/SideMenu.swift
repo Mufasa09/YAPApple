@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import PhotosUI
+
 
 struct SideMenu: View {
-    
+    @EnvironmentObject var viewModel: AuthViewModel
+    @StateObject var contentViewModel = ContentViewModel()
     @Binding var selectedTab: String
     @Namespace var animation
+    
+    
     var body: some View {
+        if let user = viewModel.currentUser{
         VStack(alignment: .leading, spacing: 15,
                content:{
             
@@ -19,39 +25,29 @@ struct SideMenu: View {
             Image("kmdlogo")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 70, alignment: .top)
+                .frame(width: 150, height: 150, alignment: .top)
                 .cornerRadius(10)
             //Padding top for Top Close Button..
                 .padding(.top, 50)
             
-            VStack(alignment: .leading, spacing: 6,
-                   content: {
+            VStack(alignment: .leading, spacing: 6){
                 
-                Text("User Name")
+                Text(user.fullname)
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
                 
-                Button(action:{},label: {
-                    Text("View Profile")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                        .opacity(0.7)
-                })
-            })
+                    
+            }
             
             //tab Buttons..
             VStack(alignment: .leading, spacing: 10){
                 
                 TabButton(image: "house", title: "Home", selectedTab: $selectedTab, animation: animation)
                 
-                TabButton(image: "clock.arrow.circlepath", title: "History", selectedTab: $selectedTab, animation: animation)
-                
-                TabButton(image: "bell.badge", title: "Notifications", selectedTab: $selectedTab, animation: animation)
+                TabButton(image: "person.wave.2", title: "Profile", selectedTab: $selectedTab, animation: animation)
                
-                TabButton(image: "gearshape.fill", title: "Settings", selectedTab: $selectedTab, animation: animation)
-                
-                TabButton(image: "questionmark.circle", title: "Help", selectedTab: $selectedTab, animation: animation)
+                TabButton(image: "video.square.fill", title: "Videos", selectedTab: $selectedTab, animation: animation)
             }
             .padding(.leading, -15)
             .padding(.top,50)
@@ -59,13 +55,23 @@ struct SideMenu: View {
             Spacer()
             
             //Sign Out Button...
-            VStack(alignment: .leading, spacing: 6, content: {
-                TabButton(image: "rectangle.righthalf.inset.fill.arrow.right", title: "Log out", selectedTab: .constant(""), animation: animation)
-                    .padding(.leading, -15)
-            })
             
+            VStack(alignment: .leading, spacing: 6, content: {
+                Button{
+                    viewModel.signOut()
+                } label: {
+                    HStack{
+                        Image(systemName: "rectangle.righthalf.inset.fill.arrow.right")
+                        Text("Logout")
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundColor(.white)
+                    .padding(.leading, -1)
+                }
+            })
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        }
     }
 }
 
