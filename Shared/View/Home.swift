@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import PhotosUI
+import FirebaseAuth
+import AVKit
+
+
 
 struct Home: View {
     @Binding var selectedTab: String
-    
+    @EnvironmentObject var viewModel: AuthViewModel
+
     
     //Hiding Tab Bar....
     
@@ -28,18 +34,12 @@ struct Home: View {
             //Views....
             HomePage()
                 .tag("Home")
+
+            Videos()
+                .tag("Videos")
             
-            History()
-                .tag("History")
-            
-            Settings()
-                .tag("Settings")
-            
-            Help()
-                .tag("Help")
-            
-            Notifications()
-                .tag("Notifications")
+            Profile()
+                .tag("Profile")
             
         }
     }
@@ -48,7 +48,6 @@ struct Home: View {
 #Preview {
     MainView()
 }
-
 
 //All Sub Views
 
@@ -65,56 +64,47 @@ struct HomePage: View{
     }
 }
 
-struct History: View{
+struct Profile: View{
     var body: some View{
         NavigationView{
-            
-            Text("History")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("History")
+            ProfileView()
         }
     }
 }
 
-struct Notifications: View{
+struct Videos: View{
+    @StateObject var contentViewModel = ContentViewModel()
+
     var body: some View{
-        NavigationView{
+        NavigationStack{
+            ScrollView{
+                ForEach(contentViewModel.videos) { video in
+                    VideoPlayer(player: AVPlayer(url: URL(string: video.videoUrl)!))
+                        .frame(height: 250)
+                }
+            }
+            .refreshable {
+                Task { try await contentViewModel.fetchVideos()}
+            }
+            .navigationTitle("Feed")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    PhotosPicker(selection: $contentViewModel.selectedItem,
+                                 matching: .any(of: [.videos, .not(.images)])){
+                        Image(systemName: "plus")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+            .padding()
             
-            Text("Notifications")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("Notifications")
         }
     }
 }
 
-struct Settings: View{
-    var body: some View{
-        NavigationView{
-            
-            Text("Settings")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("Settings")
-        }
-    }
-}
 
-struct Help: View{
-    var body: some View{
-        NavigationView{
-            
-            Text("Help")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(.primary)
-                .navigationTitle("Help")
-        }
-    }
-}
+
+
 
 

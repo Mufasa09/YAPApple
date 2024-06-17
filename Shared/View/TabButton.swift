@@ -17,7 +17,7 @@ struct TabButton: View {
     var animation: Namespace.ID
     
     var body: some View {
-        
+
         Button(action: {
             withAnimation (.spring()){selectedTab = title}
         }, label: {
